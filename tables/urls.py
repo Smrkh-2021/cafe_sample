@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from tables.views import TableListView
 
 urlpatterns = [
-    path('table/', table.as_view()),
+    path('table/', TableListView.as_view()),
 ]
