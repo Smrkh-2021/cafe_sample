@@ -17,8 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # path('', views.home, name='home'),
-    path('admin/', admin.site.urls),
-    path('', include('tables.urls')),
-    path('', include('menu_items.urls')),
+
+    path('', MenuItemsListView.as_view()),
 ]
