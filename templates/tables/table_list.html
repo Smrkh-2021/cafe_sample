@@ -5,6 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1> Tables List :</h1>
+<ul>
+    {% for table in table_list %}
+    <li>
+        {{ table }}
+    </li>
+    {% endfor %}
+</ul>
 </body>
 </html>
