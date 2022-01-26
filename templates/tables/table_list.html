@@ -6,12 +6,16 @@
 </head>
 <body>
 <h1> Tables List :</h1>
-<ul>
-    {% for table in table_list %}
-    <li>
-        {{ table }}
-    </li>
-    {% endfor %}
-</ul>
+<form method="post">{% csrf_token %}
+    <ul>
+        {% for table in table_list %}
+        <li>
+            {{ table }}
+            <input type="submit" value="Update">
+        </li>
+        {% endfor %}
+    </ul>
+</form>
+
 </body>
 </html>
