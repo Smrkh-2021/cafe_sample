@@ -7,4 +7,4 @@ from menu_items.models import MenuItem
 
 class MenuItemsListView(ListView):
     model = MenuItem
-    template_name = 'menu_items/menu_list.html'
+    template_name = 'menu_items/menu_item/menu_list.html'
