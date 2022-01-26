@@ -43,11 +43,11 @@ class Table(BaseModel):
     capacity = models.PositiveIntegerField()
 
     def all_orders(self):
-        ...
+        return self.order_set.all()
 
     @property
     def money(self, date: datetime = datetime.today()) -> int:
-        ...
+        return sum(item.get_cost() for item in self.order_set.all())
 
     def __str__(self):
         return f'table capacity:{self.capacity}'
