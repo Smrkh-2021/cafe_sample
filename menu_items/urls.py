@@ -17,6 +17,5 @@ from django.urls import path
 from menu_items.views import MenuItemsListView
 
 urlpatterns = [
-
     path('menu_items', MenuItemsListView.as_view()),
 ]
